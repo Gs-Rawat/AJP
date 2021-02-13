@@ -4,6 +4,7 @@ import java.net.*;
 public class Client {
 	private static String host;
 	private static int port;
+	private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 	public static void main(String[] args) {
 		try {
@@ -17,7 +18,6 @@ public class Client {
 
 			DataInputStream dataReader = new DataInputStream(client.getInputStream());
 			DataOutputStream dataWriter = new DataOutputStream(client.getOutputStream());
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 			String sendMsg = "";
 			String recvMsg = "";
